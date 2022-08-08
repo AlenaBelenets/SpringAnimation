@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Spring View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SpringViewController" customModule="SpringHomeWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tR3-Vm-Wh0" customClass="SpringView" customModule="SpringAnimation">
+                                <rect key="frame" x="70.5" y="104" width="273" height="237"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animations parametrs" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agh-6f-NIs">
+                                        <rect key="frame" x="20" y="107" width="185" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Agh-6f-NIs" firstAttribute="centerY" secondItem="tR3-Vm-Wh0" secondAttribute="centerY" id="UcD-DC-lyd"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Agh-6f-NIs" secondAttribute="trailing" constant="20" symbolic="YES" id="hxl-B5-wZh"/>
+                                    <constraint firstItem="Agh-6f-NIs" firstAttribute="leading" secondItem="tR3-Vm-Wh0" secondAttribute="leading" constant="20" id="pAz-W8-Ze1"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="swing"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="damping">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="velocity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="curve" value="easeInOut"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y74-vn-DcL" customClass="SpringButton" customModule="SpringAnimation">
+                                <rect key="frame" x="98" y="654.5" width="218" height="35"/>
+                                <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startSpringAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="frl-J2-4It"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Y74-vn-DcL" secondAttribute="bottom" multiplier="1.25" id="5P4-eg-pNc"/>
+                            <constraint firstItem="Y74-vn-DcL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aeh-TS-fM9"/>
+                            <constraint firstItem="Y74-vn-DcL" firstAttribute="width" secondItem="tR3-Vm-Wh0" secondAttribute="width" multiplier="0.8" id="bVV-w1-klc"/>
+                            <constraint firstItem="tR3-Vm-Wh0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="gIR-hG-lSk"/>
+                            <constraint firstItem="tR3-Vm-Wh0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qAX-1V-WDN"/>
+                            <constraint firstItem="tR3-Vm-Wh0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.65942" id="wXA-Hh-HxB"/>
+                            <constraint firstItem="tR3-Vm-Wh0" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.264509" id="zoj-Mk-JcN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="animationParameters" destination="Agh-6f-NIs" id="C59-Ty-GSz"/>
+                        <outlet property="springAnimationView" destination="tR3-Vm-Wh0" id="i3O-vv-VEU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="51.5625"/>
+        </scene>
+    </scenes>
+</document>
